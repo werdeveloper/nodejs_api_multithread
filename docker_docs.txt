@@ -1,0 +1,29 @@
+################## Docker ##################
+1. Create the Dockerfile // Manage the files as per requirement
+2. docker build -t nodejs-project-1.0.0 .  // Create docker Image
+3. docker images  // Getting the images
+4. docker run -d --name nodejs-project -e TZ=Asia/Kolkata -p 8061:8062 nodejs-project-1.0.0  // docker Image run
+                                       (or)
+4. Create the docker-compose.yml file // Manage the data as per requirement
+5. docker run --name test_node_docker_new -it -d imageId   // Run using docker-compose.yml file
+   (docker run --name test_node_docker_new -it -d nodejs-project-1.0.0)
+
+6. docker ps -a // Containers Logs   
+7. docker logs -f containerId	// docker logs
+8. docker stop dockerImageId // Docker stop
+9. docker start dockerImageId // Docker Start
+10. docker-compose up -d // Run the docker container
+11. docker-compose down // Down the docker container
+
+docker exec -it containerName sh // Go Inside the file
+
+----------------------------------------------------------------------------------------------------
+# Docker image to deploy:
+
+sudo docker load --input apig_stable_2.tar      (To untar a image)
+sudo docker run -d --name apig_security -e TZ=Asia/Kolkata -p 8055:8056 apig_stable:2.0 (To run image)
+sudo docker exec -it apig_security sh (To docker terminal)
+sudo docker logs -f apig_security (TO see docker log)
+sudo docker stop apig_security
+sudo docker start apig_security
+

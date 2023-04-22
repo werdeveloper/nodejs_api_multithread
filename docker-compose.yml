@@ -1,0 +1,12 @@
+version: "3.5"
+services:
+  nodejs_project:
+    container_name: node_project
+    restart: always
+    image: nodejs-project-1.0.0:latest  # ImageName:tag
+    ports:
+      - 5002:5001 # externalPort:internalPort
+    # volumes:
+    #   - /home/node_project/backend/portal:/usr/app
+    environment:
+      - TZ=Asia/Kolkata # Timezone
