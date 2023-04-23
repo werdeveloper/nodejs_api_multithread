@@ -1,6 +1,5 @@
 FROM node:16.16.0-alpine
 WORKDIR /backend-api/build
-COPY assets /backend-api/build/assets
 COPY config /backend-api/build/config
 COPY controllers /backend-api/build/controllers
 COPY models /backend-api/build/models
@@ -11,7 +10,6 @@ COPY config.env /backend-api/build/
 COPY index.js /backend-api/build/
 COPY index_send_bulk_mail.js /backend-api/build/
 COPY package.json /backend-api/build/
-COPY package-lock.json /backend-api/build/
 COPY Dockerfile /backend-api/build/
 
 RUN npm install

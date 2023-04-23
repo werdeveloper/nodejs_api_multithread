@@ -25,6 +25,5 @@ yarn-error.log*
 
 /backend-api/package-lock.json
 
-**/assets/
 *.tar
 *.zip
