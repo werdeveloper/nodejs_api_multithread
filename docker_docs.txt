@@ -6,7 +6,7 @@
                                        (or)
 4. Create the docker-compose.yml file // Manage the data as per requirement
 5. docker run --name test_node_docker_new -it -d imageId   // Run using docker-compose.yml file
-   (docker run --name test_node_docker_new -it -d nodejs-project-1.0.0)
+   (docker run --name nodejs-project-1.0.0 -it -d 72d69ba51c9f)
 
 6. docker ps -a // Containers Logs   
 7. docker logs -f containerId	// docker logs
@@ -16,6 +16,10 @@
 11. docker-compose down // Down the docker container
 
 docker exec -it containerName sh // Go Inside the file
+(docker exec -it nodejs-project-1.0.0 sh)
+   vi app.js   // Ope. the app.js file on terminal
+   vi config/database.js   // Open the config/database.js file on terminal
+   exit  // For exit from the container file
 
 ----------------------------------------------------------------------------------------------------
 # Docker image to deploy:
