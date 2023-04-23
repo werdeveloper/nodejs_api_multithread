@@ -7,12 +7,12 @@ exports.getErrorResponse = (error, req, res, next) =>{
 
 exports.invalidPathHandler = (req, res, next) => {
     // console.log(req.path)
-    console.log('\x1b[31m',"{404 Error - We can't seem to find the page you're looking for.}")
-    return res.status(404).json({ status:404, msg: "We can't seem to find the page you're looking for.", error: true });
+    console.log('\x1b[31m',`{404 Error - We can't ${req.url} seem to find the page you're looking for.}`);
+    return res.status(404).json({ status:404, msg: `We can't ${req.url} seem to find the page you're looking for.`, error: true });
 }
 
 // Not use yet
 exports.errorLogger = (err, req, res, next) => {
     console.error('\x1b[31m', err) // adding some color to our logs
     next(err) // calling next middleware
-  }
+}

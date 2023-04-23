@@ -91,12 +91,12 @@ const userModel = db.define(
   }
 );
 
-(async () => {
-    await userModel.sync().then(() => {
-        // console.log('users table created successfully!');
-    }).catch((error) => {
-        console.error('Unable to create users table : ', error);
-    });
-})();
+// (async () => {
+//     await userModel.sync().then(() => {
+//         // console.log('users table created successfully!');
+//     }).catch((error) => {
+//         console.error('Unable to create users table : ', error);
+//     });
+// })();
 
 module.exports = userModel;

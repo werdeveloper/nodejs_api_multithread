@@ -1,5 +1,5 @@
-const {Sequelize} = require("sequelize")
-const db = require("../config/database")
+const {Sequelize} = require("sequelize");
+const db = require("../config/database");
 const { DataTypes } = Sequelize;
 
 const religionMasterModel = db.define("religions", {
@@ -37,12 +37,12 @@ const religionMasterModel = db.define("religions", {
     paranoid: true,
 });
 
-(async () => {
-    await religionMasterModel.sync().then(() => {
-        // console.log('religionMasterModel table created successfully!');
-    }).catch((error) => {
-        console.error('Unable to create table : ', error);
-    });
-})();
+// (async () => {
+//     await religionMasterModel.sync().then(() => {
+//         // console.log('religionMasterModel table created successfully!');
+//     }).catch((error) => {
+//         console.error('Unable to create table : ', error);
+//     });
+// })();
 
 module.exports = religionMasterModel;

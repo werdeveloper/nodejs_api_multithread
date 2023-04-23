@@ -8,6 +8,7 @@ const { QueryTypes } = require("sequelize");
 
 const cpus = os.cpus;
 const numCPUs = cpus().length; // Getting the No. of CPUs
+console.log('No.of CPUs', numCPUs);
 
 const start = () => {
   try {
@@ -51,7 +52,7 @@ const start = () => {
 };
 
 console.log("Process Start", new Date().getTime());
-/* if (numCPUs > 1) {
+if (numCPUs > 1) {
    if (cluster.isPrimary) {
       console.log(`Primary -----> ${process.pid} is running`);
       console.log(`Forking for -----> ${numCPUs} CPUs`);
@@ -69,9 +70,9 @@ console.log("Process Start", new Date().getTime());
    } else {
       start();
    }
-} else { */
+} else {
   start(); 
-// }
+}
 console.log("Process End", new Date().getTime());
 
 // For Syntax and UncaughtException Error
